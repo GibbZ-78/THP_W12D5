@@ -43,11 +43,13 @@
         console.log("  > mybinarytree (tableau trié) = " + mybinarytree.returnSortedArrayFromTree());
         console.log("\n***** On passe aux arbres N-aires pour le morpion ***");
         let myntree = new TicTacToeTree();
-        console.log("  > myntree (vide) = " + myntree);
+        console.log("  > Here below is 'myntree' still empty:");
+        console.log(myntree);
         myntree.loadGridIntoTree([[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]);
-        //console.log("  > myntree = " + myntree);
+        console.log("  > Here below is 'myntree' again but stuffed with content. Drill down to find out:");
         //myntree.displayTree();
         console.log(myntree);
+        console.log("  > Here below is an example of the 'finInTree' function launched with [2,1]:");
         console.log(myntree.findInTree([2, 1]));
 
     </script>

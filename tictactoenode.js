@@ -47,7 +47,7 @@ class TicTacToeTreeNode {
   findInNode(myCoords) {
     if (this.nodeTab.length > 0) {
       for (let i = 0; i < this.nodeTab.length; i++) {
-        if (this.content === myCoords) {
+        if (this.content == myCoords) {
           return this;
         } else {
           this.nodeTab[i].findInNode(myCoords);
