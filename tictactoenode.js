@@ -10,8 +10,8 @@ class TicTacToeTreeNode {
     this.nodeTab.push(myNode);
   }
 
-  insertValue() {
-
+  insertValue(myValue) {
+    this.content = myValue;
   }
 
 }
