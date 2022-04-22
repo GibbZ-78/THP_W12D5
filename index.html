@@ -44,8 +44,11 @@
         console.log("\n***** On passe aux arbres N-aires pour le morpion ***");
         let myntree = new TicTacToeTree();
         console.log("  > myntree (vide) = " + myntree);
-        myntree.initTTTTree([[0, 0], [0, 1], [1, 0], [1, 1]]);
-        console.log("  > myntree (initialisé pour un morpion 2x2) = " + myntree);
+        myntree.loadGridIntoTree([[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]);
+        //console.log("  > myntree = " + myntree);
+        //myntree.displayTree();
+        console.log(myntree);
+        console.log(myntree.findInTree([2, 1]));
 
     </script>
 </body>
