@@ -1,4 +1,4 @@
-class TreeNode {
+class BinaryTreeNode {
 
   // Initialises a new Node with a given content (or "null") and "null" children Nodes
   constructor(myContent = null) {
@@ -7,18 +7,20 @@ class TreeNode {
     this.rightNode = null;
   }
 
-  // 
+  // Ajoute, demanière triée par "compare()" la valeur "myValue" : (i) dans le noeud depuis lequel est appelé 
+  // la fonction si le contenu de ce noeud est "null" OU (ii) sous ce dernier, selon la valeur de son contenu 
+  // et sa comparaison avec la valeur à ajouter
   insert(myValue) {
     if (this.content === null) {
       this.content = myValue;
     } else if (this.compare(myValue)) {
       if (this.leftNode === null) {
-        this.leftNode = new Node();
+        this.leftNode = new BinaryTreeNode();
       }
       this.leftNode.insert(myValue);
     } else {
       if (this.rightNode === null) {
-        this.rightNode = new Node();
+        this.rightNode = new BinaryTreeNode();
       }
       this.rightNode.insert(myValue);
     }

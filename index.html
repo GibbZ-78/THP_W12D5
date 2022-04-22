@@ -1,34 +1,53 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>The Hacking Morpion</title>
-        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lobster">
-        <link rel="stylesheet" type="text/css" href="./style.css" />
-    </head>
-    <body>
-        <h1 class="title">The Hacking Morpion</h1>
-        <section class="game-grid">
-            <div class="cell" id="A1"></div>
-            <div class="cell" id="A2"></div>
-            <div class="cell" id="A3"></div>
 
-            <div class="cell" id="B1"></div>
-            <div class="cell" id="B2"></div>
-            <div class="cell" id="B3"></div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hacking Morpion</title>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lobster">
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+</head>
 
-            <div class="cell" id="C1"></div>
-            <div class="cell" id="C2"></div>
-            <div class="cell" id="C3"></div>
-        </section>
-        <section class="actions">
-            <a class="replay-button" href="./index.html">Rejouer</a>
-        </section>
-        <div class="end-message" id="end-message"></div>
-        <script src="./morpion.js"></script>
-        <script>
-            const morpion = new Morpion();
-        </script>
-    </body>
+<body>
+    <h1 class="title">The Hacking Morpion</h1>
+    <section class="game-grid">
+        <div class="cell" id="A1"></div>
+        <div class="cell" id="A2"></div>
+        <div class="cell" id="A3"></div>
+
+        <div class="cell" id="B1"></div>
+        <div class="cell" id="B2"></div>
+        <div class="cell" id="B3"></div>
+
+        <div class="cell" id="C1"></div>
+        <div class="cell" id="C2"></div>
+        <div class="cell" id="C3"></div>
+    </section>
+    <section class="actions">
+        <a class="replay-button" href="./index.html">Rejouer</a>
+    </section>
+    <div class="end-message" id="end-message"></div>
+    <script src="./binarytreenode.js"></script>
+    <script src="./binarytree.js"></script>
+    <script src="./tictactoenode.js"></script>
+    <script src="./tictactoetree.js"></script>
+    <script src="./morpion.js"></script>
+    <script>
+        const morpion = new Morpion();
+        console.log("\n***** Petit test rétrospectif sur les arbres binaires ***");
+        let mybinarytree = new BinaryTree();
+        console.log("  > mybinarytree (vide) = " + mybinarytree);
+        mybinarytree.fillWithArray([12, 0, -4, 8, 127, 34, 0, -5, 7777, -9, 10, 666, 9999]);
+        console.log("  > mybinarytree (rempli) = " + mybinarytree);
+        console.log("  > mybinarytree (tableau trié) = " + mybinarytree.returnSortedArrayFromTree());
+        console.log("\n***** On passe aux arbres N-aires pour le morpion ***");
+        let myntree = new TicTacToeTree();
+        console.log("  > myntree (vide) = " + myntree);
+        myntree.initTTTTree([[0, 0], [0, 1], [1, 0], [1, 1]]);
+        console.log("  > myntree (initialisé pour un morpion 2x2) = " + myntree);
+
+    </script>
+</body>
+
 </html>
